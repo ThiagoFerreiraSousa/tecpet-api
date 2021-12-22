@@ -3,11 +3,13 @@ package com.tfs.tecpet.service.impl;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.tfs.tecpet.model.dao.TutorDao;
 import com.tfs.tecpet.model.entity.TutorEntity;
 import com.tfs.tecpet.service.TutorService;
 
+@Service
 public class TutorServiceImpl implements TutorService{
 	
 	@Autowired
@@ -28,8 +30,5 @@ public class TutorServiceImpl implements TutorService{
 	
 	public void delete(TutorEntity tutor) {
 		dao.delete(tutor);
-	}
-
-
-	
+	}	
 }

@@ -3,11 +3,13 @@ package com.tfs.tecpet.service.impl;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.tfs.tecpet.model.dao.ConsultaDao;
 import com.tfs.tecpet.model.entity.ConsultaEntity;
 import com.tfs.tecpet.service.ConsultaService;
 
+@Service
 public class ConsultaServiceImpl implements ConsultaService{
 	
 	@Autowired

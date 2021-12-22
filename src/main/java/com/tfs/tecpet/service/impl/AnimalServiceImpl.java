@@ -3,11 +3,13 @@ package com.tfs.tecpet.service.impl;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.tfs.tecpet.model.dao.AnimalDao;
 import com.tfs.tecpet.model.entity.AnimalEntity;
 import com.tfs.tecpet.service.AnimalService;
 
+@Service
 public class AnimalServiceImpl implements AnimalService{
 	
 	@Autowired

@@ -3,14 +3,18 @@ package com.tfs.tecpet.api.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.tfs.tecpet.model.entity.AnimalEntity;
 import com.tfs.tecpet.service.AnimalService;
 
 @RestController
+@CrossOrigin
+@RequestMapping("/animal")
 public class AnimalController {
 	
 	@Autowired

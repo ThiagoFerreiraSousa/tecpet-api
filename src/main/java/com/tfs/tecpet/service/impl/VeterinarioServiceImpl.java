@@ -3,11 +3,13 @@ package com.tfs.tecpet.service.impl;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.tfs.tecpet.model.dao.VeterinarioDao;
 import com.tfs.tecpet.model.entity.VeterinarioEntity;
 import com.tfs.tecpet.service.VeterinarioService;
 
+@Service
 public class VeterinarioServiceImpl implements VeterinarioService{
 	
 	@Autowired
