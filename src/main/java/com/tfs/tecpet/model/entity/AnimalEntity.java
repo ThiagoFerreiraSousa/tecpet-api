@@ -1,6 +1,7 @@
 package com.tfs.tecpet.model.entity;
 
-import java.time.LocalDate;
+import java.io.Serializable;
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -15,14 +16,18 @@ import javax.persistence.Table;
 
 import com.tfs.tecpet.model.enums.EspecieEnum;
 
-import lombok.Builder;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
+@NoArgsConstructor
+@AllArgsConstructor
 @Data
-@Builder
 @Entity
-@Table(name = "animal", schema = "tecpet")
-public class AnimalEntity {
+@Table(name = "animal", schema = "pettec")
+public class AnimalEntity implements Serializable {
+
+	private static final long serialVersionUID = 1L;
 
 	@Id
 	@Column(name = "id")
@@ -33,17 +38,17 @@ public class AnimalEntity {
 	private String nome;
 
 	@Column(name = "especie")
-	@Enumerated (value = EnumType.STRING)
-	private EspecieEnum especie;	
-	
+	@Enumerated(value = EnumType.STRING)
+	private EspecieEnum especie;
+
 	@Column(name = "raca")
 	private String raca;
 
-	@Column(name = "data_nacimento")
-	private LocalDate dataNascimento;
+	@Column(name = "data_nascimento")
+	private Date dataNascimento;
 
 	@JoinColumn(name = "id_tutor")
 	@ManyToOne
-	private TutorEntity idTutor;
+	private TutorEntity tutor;
 
 }

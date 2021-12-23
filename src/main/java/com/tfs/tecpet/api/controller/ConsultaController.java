@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -31,13 +32,13 @@ public class ConsultaController {
 	}
 	
 	@PostMapping("/salvar")
-	public ConsultaEntity salvar(ConsultaEntity tutor){
-		return service.salvar(tutor);
+	public ConsultaEntity salvar(@RequestBody ConsultaEntity consulta){
+		return service.salvar(consulta);
 	}
 	
 	@PostMapping("/delete")
-	public void delete(ConsultaEntity tutor){
-		service.delete(tutor);
+	public void delete(@RequestBody ConsultaEntity consulta){
+		service.delete(consulta);
 	}
 	
 }
