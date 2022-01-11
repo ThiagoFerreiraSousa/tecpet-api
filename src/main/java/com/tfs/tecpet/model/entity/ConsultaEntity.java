@@ -35,7 +35,6 @@ public class ConsultaEntity implements Serializable {
 	private Long id;
 
 	@Column(name = "data_consulta")
-//	@Convert(converter = Jsr310JpaConverters.LocalDateConverter.class)
 	private Date dataConsulta;
 
 	@Column(name = "status")
